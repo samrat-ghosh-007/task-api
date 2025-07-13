@@ -33,6 +33,7 @@ router.get('/leaderboard', async (req, res) => {
         name: user.name,
         totalPoints: user.totalPoints
     }));
+    res.json(ranked);
   } catch (err) {
     res.status(500).json({ error: 'Failed to fetch leaderboard' });
   }
