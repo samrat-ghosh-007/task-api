@@ -32,19 +32,13 @@ cd task-api
 npm install
 ```
 
-
-### 3. Run the Development Server
-```bash
-npm start
-```
-
-### 4. Setup Environment Variables
+### 3. Setup Environment Variables
 Create a .env file in the root directory and add the following variables:
 ```bash
 MONGO_URI=your_mongodb_uri
 ```
 
-### 5. Start the Server
+### 4. Start the Server
 ```bash
 npm start
 ```
@@ -55,10 +49,11 @@ The backend will start at: http://localhost:5000
 
 | Method | Endpoint                   | Description                        |
 |--------|----------------------------|------------------------------------|
-| GET    | `/api/users/random`        | Returns a random user              |
-| POST   | `/api/points/claim`        | Claims points for a user           |
-| GET    | `/api/leaderboard`         | Gets the points leaderboard        |
-| GET	   | `/api/claims/:userId`      |	Get point claim history for a user |
+| GET    | `/api/users/random`        | Returns random users               |
+| GET    | `/api/users/leaderboard`   | Gets the points leaderboard        |
+| GET	   | `/api/users`               |	Get all users                      |
+| POST   | `/api/claim`               | Claims points for a user           |
+| POST   | `/api/users`               | Adds new user                      |
 
 ## 🌐 CORS Configuration
 
