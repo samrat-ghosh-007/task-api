@@ -58,6 +58,7 @@ The backend will start at: http://localhost:5000
 | GET    | `/api/users/random`        | Returns a random user              |
 | POST   | `/api/points/claim`        | Claims points for a user           |
 | GET    | `/api/leaderboard`         | Gets the points leaderboard        |
+| GET	   | `/api/claims/:userId`      |	Get point claim history for a user |
 
 ## 🌐 CORS Configuration
 
@@ -94,10 +95,10 @@ const corsOptions = {
       callback(new Error('Not allowed by CORS'));
     }
   },
-  credentials: true
+  credentials: false
 };
 
-app.use(cors(corsOptions));
+app.options('*', cors());
 ```
 
 ## 🧾 License
