@@ -24,6 +24,17 @@ router.post('/', async (req, res) => {
   }
 });
 
+// Get 10 random users
+router.get('/', async (req, res) => {
+  try {
+    const users = await User.aggregate([{ $sample: { size: 10 } }]);
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to fetch random users' });
+  }
+});
+
+
 // GET leaderboard (sorted by points)
 router.get('/leaderboard', async (req, res) => {
   try {
