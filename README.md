@@ -25,24 +25,29 @@ This is the backend API for the Points Claim System task, built with Node.js, Ex
 ```bash
 git clone https://github.com/samrat-ghosh-007/task-api.git
 cd task-api
+```
 
 ### 2.  Install Dependencies
 ```bash
 npm install
+```
 
 
 ### 3. Run the Development Server
 ```bash
 npm start
+```
 
 ### 4. Setup Environment Variables
 Create a .env file in the root directory and add the following variables:
 ```bash
 MONGO_URI=your_mongodb_uri
+```
 
 ### 5. Start the Server
 ```bash
 npm start
+```
 
 The backend will start at: http://localhost:5000
 
