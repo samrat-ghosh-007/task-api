@@ -7,10 +7,13 @@ const app = express();
 
 
 // ✅ Dynamic CORS setup
-const allowedOrigins = [
-  'https://task-frontend-azure.vercel.app',
-  'https://task-frontend-hf2ww8tpm-samrat-ghoshs-projects-350a7834.vercel.app'
-];
+const allowedOrigins = process.env.NODE_ENV === 'production'
+  ? [
+      'https://task-frontend-azure.vercel.app',
+      'https://task-frontend-hf2ww8tpm-samrat-ghoshs-projects-350a7834.vercel.app'
+    ]
+  : ['http://localhost:3000'];
+
 
 app.use(cors({
   origin: function (origin, callback) {
