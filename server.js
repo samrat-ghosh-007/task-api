@@ -6,8 +6,20 @@ require('dotenv').config();
 const app = express();
 
 
+// ✅ Dynamic CORS setup
+const allowedOrigins = [
+  'https://task-frontend-azure.vercel.app',
+  'https://task-frontend-hf2ww8tpm-samrat-ghoshs-projects-350a7834.vercel.app'
+];
+
 app.use(cors({
-  origin: ['https://task-frontend-azure.vercel.app'], 
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS Not Allowed'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: false
 }));
