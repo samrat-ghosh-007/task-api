@@ -40,7 +40,7 @@ MONGO_URI=your_mongodb_uri
 
 ### 4. Start the Server
 ```bash
-npm start
+node server.js
 ```
 
 The backend will start at: http://localhost:5000
