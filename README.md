@@ -6,7 +6,7 @@ This is the backend API for the Points Claim System task, built with Node.js, Ex
 
 ## 🔗 Live API URL
 
-- 🌐 [https://task-api-wvbq.onrender.com](https://task-api-wvbq.onrender.com)
+- 🌐 [https://task-api-0c09.onrender.com](https://task-api-0co9.onrender.com)
 
 ---
 
